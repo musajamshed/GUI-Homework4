@@ -1,0 +1,172 @@
+/*
+File: style.css
+GUI Assignment: Homework 4
+Musa Jamshed, UMass Lowell Computer Science, Musa_Jamshed@student.uml.edu
+Last Modified: November 29, 2022
+Description: Using jQuery with Dynamic Multiplication Table
+*/
+
+body{
+    background-color: #ebe0d0;
+    color: #3C280D;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+/* parameters for container class */
+.container{
+    width: 80%;
+    margin: auto;
+    /* overflow: auto; */
+    border: solid 3px #3C280D;
+}
+
+/* styling website header */
+#header{
+    background-color: #3C280D;
+    color: white;
+    text-align: center;
+    font-family: fantasy;
+}
+
+#welcome{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #3C280D;
+}
+
+#instructions{
+    font-family: sans-serif;
+    text-align: center;
+    color: #414141;
+    font-size: larger;
+}
+
+/* center the form */
+#form{
+    text-align: center;
+}
+
+.form-label{
+    font-weight: bold;
+}
+
+/* styling input boxes */
+.form-control{
+    min-width: 25%;
+    padding: 10px;
+    margin: 5px;
+    font-size: 18px;
+    text-align: center;
+    color: #3C280D;
+    background-color: white;
+}
+
+/* styling submit button */
+#submit{
+    color: white;
+    background-color: #3C280D;
+    min-width: 20%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* styling save button */
+#save{
+    color: white;
+    background-color: #3C280D;
+    min-width: 20%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* styling error message */
+#error{
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* overflow scrolling for table */
+#myTable{
+    max-width: 700px;
+    max-height: 700px;
+    align-content: center;
+    margin: auto;
+    overflow: auto;
+}
+
+/* center each value */
+#myTable table, td, th{
+    font-size: 1.2em;
+    border: 1px solid;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+/* table headers */
+#myTable th{
+    background-color: #3C280D;
+    color: white
+}
+
+/* making the footer look more "official" */
+#footer{
+    text-align: center;
+    color: #3C280D;
+    margin-top: 75px;
+}
+
+/* making the error messages stand out */
+.error {
+    color: red;
+    text-align: center;
+    display: block;
+}
+
+/* tabs at bottom of page */
+#tabs {
+    color: #3C280D;
+    background-color: #3C280D;
+}
+
+/* styling sample table */
+#sampleTable {
+    color: #3C280D;
+    background-color: #ebe0d0;
+    border: #3C280D;
+}
+
+/* sample table li */
+#liSample {
+    background-color: #3C280D;
+    border: #3C280D;
+}
+
+/* delete tab button */
+#deleteButton {
+    color: #3C280D;
+    background-color: #ebe0d0;
+    border: #3C280D;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+/* style row sliders*/
+#rowSlider1, #rowSlider2 {
+    width: 80%;
+    margin: auto;
+}
+
+/* style column sliders*/
+#columnSlider1, #columnSlider2 {
+    width: 80%;
+    margin: auto;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<!--
+File: index.html
+GUI Assignment: Homework 4
+Musa Jamshed, UMass Lowell Computer Science, Musa_Jamshed@student.uml.edu
+Last Modified: November 29, 2022
+Description: Using jQuery with Dynamic Multiplication Table
+-->
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Musa's Multiplication Table</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- validation jQuery -->
+    <script src="js/jquery-validation-1.19.5/lib/jquery-1.11.1.js"></script>
+    <script src="js/jquery-validation-1.19.5/lib/jquery.js"></script>
+    <script src="js/jquery-validation-1.19.5/dist/jquery.validate.js"></script>
+    <script src="js/jquery-validation-1.19.5/dist/additional-methods.js"></script>
+
+    <!-- UI jQuery -->
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <script src="js/jquery-ui-1.13.2/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/validation.js"></script>
+
+    </head>
+  <body>
+    <!-- webpage header -->
+    <header id = "header">
+        <div class="container">
+            <h1>Musa's Multiplication Table</h1>
+        </div>
+    </header>
+    
+    <!-- main area -->
+    <div class="container">
+        <!-- instructions area-->
+        <div>
+            <h1 id="welcome">Welcome!</h1>
+            <h4 id="instructions">Enter the lower and upper bounds for both the horizontal axis and vertical axis of your desired multiplication table. Please note that your values must be between -50 and 50.</h4>
+        </div>
+
+        <!-- form -->
+        <form id="form">
+            <!-- horizontal axis-->
+            <div>
+                <label class="form-label">Horizontal Axis: </label> <br>
+                <input type="text" id="rowStart" name="rowStart" class="form-control" placeholder="Enter horizontal start"/> <br>
+                <div id="rowSlider1"></div><br>
+                <input type="text" id="rowEnd" name="rowEnd" class="form-control" placeholder="Enter horizontal end"/> <br>
+                <div id="rowSlider2"></div><br>
+            </div>
+            
+            <!-- vertical axis-->
+            <div>
+                <label class="form-label">Vertical Axis: </label> <br>
+                <input type="text" id="columnStart" name="columnStart" class="form-control" placeholder="Enter vertical start"/> <br>
+                <div id="columnSlider1"></div><br>
+                <input type="text" id="columnEnd" name="columnEnd" class="form-control" placeholder="Enter vertical end"/> <br>
+                <div id="columnSlider2"></div><br>
+            </div>
+
+            <!-- submit button-->
+            <input type="button" id="submit" onclick="generateTable()" value="View Table">
+            <input type="button" style="display: none;" id="submitButton" value="Submit" onclick="generateTable()">
+            <input type="button" id="save" value="Save Table">
+    
+        </form>
+
+        <!-- error message-->
+        <div id="error"></div>
+        
+        <!-- table -->
+        <div id="myTable"></div>
+
+        <script src="js/script.js"></script>
+
+        <!-- tabs to save tables -->
+        <div id="tabs">
+            <p id="tableMessage"></p>
+            <ul>
+                <li id="liSample">
+                    <a href="#fragment-ex" id="sampleTable">Sample Table</a>
+                </li>
+            </ul>
+            <div id="frags">
+                <div id="fragment-ex">
+                    <table><tbody><tr><th class="x">×</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr><tr><th>1</th><td><span>1</span></td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th>2</th><td>2</td><td><span>4</span></td><td>6</td><td>8</td><td>10</td></tr><tr><th>3</th><td>3</td><td>6</td><td><span>9</span></td><td>12</td><td>15</td></tr><tr><th>4</th><td>4</td><td>8</td><td>12</td><td><span>16</span></td><td>20</td></tr><tr><th>5</th><td>5</td><td>10</td><td>15</td><td>20</td><td><span>25</span></td></tr></tbody></table>
+                </div>
+            </div>
+            <!-- delete tab button -->
+            <input class="tabs-buttons" type="button" id="deleteButton" value="Delete Current Tab">
+        </div>
+        <script src="js/ui.js"></script>
+    </div>
+    
+  </body>
+</html>
